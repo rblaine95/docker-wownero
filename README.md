@@ -20,8 +20,6 @@ docker run \
 
 ### Where can I download the image?
 I'm using Github Actions to build and publish this image to:
-* [docker.io/rblaine/wownero](https://hub.docker.com/r/rblaine/wownero)
-* [quay.io/rblaine95/wownero](https://quay.io/repository/rblaine95/wownero)
 * [ghcr.io/rblaine95/wownero](https://ghcr.io/rblaine95/wownero)
 
 ### Take my Weewow!
@@ -55,4 +53,4 @@ And maybe get some Monero while you're at it
 [github-actions-badge]: https://img.shields.io/github/actions/workflow/status/rblaine95/docker_wownero/docker.yml?branch=master "Github Workflow Status (master)"
 [github-actions-link]: https://github.com/rblaine95/docker_wownero/actions?query=workflow%3ADocker
 [docker-image-size-badge]: https://img.shields.io/docker/image-size/rblaine/wownero "Docker Image Size (latest by date)"
-[docker-image-link]: https://hub.docker.com/r/rblaine/wownero
+[docker-image-link]: https://ghcr.io/rblaine95/wownero
