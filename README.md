@@ -25,8 +25,8 @@ I'm using Github Actions to build and publish this image to:
 ### Take my Weewow!
 This is just a hobby project for me, if you really want to give me your Weewow, thank you :)  
 
-WOW: `WW3WeBQ4iVJFEubDK2r3dYfTDekjeDhWiN5Liuak3y1A62Ccr7z2tF97tMW5q2SeTLHpJpAkdDutU6kWZFuTVHxE2dX2dLYrP`  
-![WOW Address](https://api.qrserver.com/v1/create-qr-code/?data=WW3WeBQ4iVJFEubDK2r3dYfTDekjeDhWiN5Liuak3y1A62Ccr7z2tF97tMW5q2SeTLHpJpAkdDutU6kWZFuTVHxE2dX2dLYrP&amp;size=150x150 "WW3WeBQ4iVJFEubDK2r3dYfTDekjeDhWiN5Liuak3y1A62Ccr7z2tF97tMW5q2SeTLHpJpAkdDutU6kWZFuTVHxE2dX2dLYrP")
+WOW: `WW2Ngnhqk7uXL92YjofsWDYDMmz8V1XoPamuZhtUCR5jW2bLT2CZE8N5DmgjnA9j7HSzUCRCLFkQXeofLoNfqv1k1Wbte1xNV`  
+![WOW Address](https://api.qrserver.com/v1/create-qr-code/?data=WW2Ngnhqk7uXL92YjofsWDYDMmz8V1XoPamuZhtUCR5jW2bLT2CZE8N5DmgjnA9j7HSzUCRCLFkQXeofLoNfqv1k1Wbte1xNV&amp;size=150x150 "WW2Ngnhqk7uXL92YjofsWDYDMmz8V1XoPamuZhtUCR5jW2bLT2CZE8N5DmgjnA9j7HSzUCRCLFkQXeofLoNfqv1k1Wbte1xNV")
 
 Monero: `83TeC9hCsZjjUcvNVH6VD64FySQ2uTbgw6ETfzNJa51sJaM6XL4NParSNsKqEQN4znfpbtVj84smigtLBtT1AW6BTVQVQGh`  
 ![XMR Address](https://api.qrserver.com/v1/create-qr-code/?data=83TeC9hCsZjjUcvNVH6VD64FySQ2uTbgw6ETfzNJa51sJaM6XL4NParSNsKqEQN4znfpbtVj84smigtLBtT1AW6BTVQVQGh&amp;size=150x150 "83TeC9hCsZjjUcvNVH6VD64FySQ2uTbgw6ETfzNJa51sJaM6XL4NParSNsKqEQN4znfpbtVj84smigtLBtT1AW6BTVQVQGh")
