@@ -5,7 +5,6 @@ Many security (maybe)
 
 [![Github tag (latest by date)][github-tag-badge]][github-tag-link]  
 [![GitHub Workflow Status (branch)][github-actions-badge]][github-actions-link]  
-[![Docker Image Size (latest by date)][docker-image-size-badge]][docker-image-link]
 
 Usage:
 ```sh
@@ -52,5 +51,3 @@ And maybe get some Monero while you're at it
 [github-tag-link]: https://github.com/rblaine95/docker_wownero/tags
 [github-actions-badge]: https://img.shields.io/github/actions/workflow/status/rblaine95/docker_wownero/docker.yml?branch=master "Github Workflow Status (master)"
 [github-actions-link]: https://github.com/rblaine95/docker_wownero/actions?query=workflow%3ADocker
-[docker-image-size-badge]: https://img.shields.io/docker/image-size/rblaine/wownero "Docker Image Size (latest by date)"
-[docker-image-link]: https://ghcr.io/rblaine95/wownero
