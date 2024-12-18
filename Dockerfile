@@ -10,15 +10,16 @@ RUN apt-get update && \
 
 WORKDIR /opt/wownero
 
+ARG VERSION="v0.11.3.0"
 RUN case "$(uname -m)" in \
-      x86_64) ID="280753b0-3af0-4a78-a248-8b925e8f4593" ;; \
-      aarch64* | arm64 | armv8*) ID="0869ffe3-eeff-4240-a185-168ca80fa1e3" ;; \
-      armv7*) ID="ff0c4886-3865-4670-9bc6-63dd60ded0e3" ;; \
-      *) echo "Unexpected architecture: $(uname -m)" && exit 1;; \
+      x86_64) FILE="wownero-x86_64-linux-gnu-${VERSION}.tar.bz2" ;; \
+      aarch64* | arm64 | armv8*) FILE="wownero-aarch64-linux-gnu-${VERSION}.tar.bz2" ;; \
+      armv7*) FILE="wownero-arm-linux-gnueabihf-${VERSION}.tar.bz2" ;; \
+      *) echo "Unexpected architecture: $(uname -m)" && exit 1 ;; \
     esac && \
-    wget https://git.wownero.com/attachments/${ID} && \
-    tar -xjvf ${ID} --strip-components 1 && \
-    rm -f ${ID}
+    wget https://codeberg.org/wownero/wownero/releases/download/${VERSION}/${FILE} && \
+    tar -xjvf ${FILE} --strip-components 1 && \
+    rm -f ${FILE}
 
 ##################
 # --- runner --- #
