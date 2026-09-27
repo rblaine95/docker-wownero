@@ -13,16 +13,13 @@ jobs:
         arch: [amd64, arm64, armv7]
         include:
           - arch: amd64
-            runs-on: ubuntu-latest
+            runs-on: ubuntu-26.04
             platform: linux/amd64
           - arch: arm64
-            runs-on: ubuntu-latest
+            runs-on: ubuntu-26.04-arm64
             platform: linux/arm64
-            # One day, when ARM based Github Hosted Runners are GA...
-            # https://github.com/github/roadmap/issues/970
-            # runs-on: ubuntu-latest-arm64
           - arch: armv7
-            runs-on: ubuntu-latest
+            runs-on: ubuntu-26.04
             platform: linux/arm/v7
     steps:
       - uses: actions/checkout@v7
@@ -33,15 +30,13 @@ jobs:
         with:
           platforms: ${{ matrix.platform }}
           push: false
-          cache-from: |
-            type=gha,scope=docker-build-${{ matrix.arch }}
-          cache-to: |
-            type=gha,mode=max,scope=docker-build-${{ matrix.arch }}
+          cache-from: type=gha,scope=docker-build-${{ matrix.arch }}
+          cache-to: type=gha,mode=max,scope=docker-build-${{ matrix.arch }}
           context: .
   combine:
     name: Combine
     needs: [build]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     permissions:
       contents: read
       packages: write
@@ -57,9 +52,8 @@ jobs:
       - uses: docker/metadata-action@v6
         id: meta
         with:
-          images: |
-            ghcr.io/${{ github.repository_owner }}/wownero
-          tags: |
+          images: ghcr.io/${{ github.repository_owner }}/wownero
+          tags: |-
             type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
             type=raw,value={{branch}},enable=${{ github.ref != format('refs/heads/{0}', 'master') }}
             type=ref,event=tag
@@ -69,10 +63,9 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: |
+          cache-from: |-
             type=gha,scope=docker-package
             type=gha,scope=docker-build-amd64
             type=gha,scope=docker-build-arm64
             type=gha,scope=docker-build-armv7
-          cache-to: |
-            type=gha,mode=max,scope=docker-package
+          cache-to: type=gha,mode=max,scope=docker-package
