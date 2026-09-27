@@ -10,7 +10,7 @@ RUN apt-get update && \
 
 WORKDIR /opt/wownero
 
-ARG VERSION="v0.11.3.0"
+ARG VERSION="v0.11.4.0"
 RUN case "$(uname -m)" in \
   x86_64) FILE="wownero-x86_64-linux-gnu-${VERSION}.tar.bz2" ;; \
   aarch64* | arm64 | armv8*) FILE="wownero-aarch64-linux-gnu-${VERSION}.tar.bz2" ;; \
